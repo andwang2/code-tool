@@ -1,0 +1,40 @@
+1. install maven
+
+2. install mysql 5.7.26
+   install mysql workbench
+
+cd mysql/bin
+mysqld --initialize --console
+mysqld --install
+// start mysql service
+mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';
+
+create schema cache-cloud
+import cachecloud.sql to above schema
+
+select @@global.sql_mode;
+set @@global.sql_mode=`STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION`;
+
+3. setup cache cloud
+
+modify cachecloud-master\cachecloud-open-web\src\main\swap\local.properties
+
+cd cachecloud-home 
+mvn clean compile install -Plocal
+
+cd cachecloud-open-web
+mvn spring-boot:run
+
+
+4. login 
+http://127.0.0.1:9999/manage/login
+
+user: admin 
+pwd: admin
+
+5.
+// redis config
+	config set protected-mode no
+
+
