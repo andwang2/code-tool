@@ -1,0 +1,10 @@
+1. elasticsearch.yml
+    xpack.security.enabled: true
+
+2. 
+    cd elasticsearch/bin
+    elasticsearch-setup-passwords.bat interactive
+
+3. kibana.yml
+    elasticsearch.username: "kibana"
+    elasticsearch.password: "Welcome2"
