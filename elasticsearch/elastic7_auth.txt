@@ -1,5 +1,6 @@
 1. elasticsearch.yml
     xpack.security.enabled: true
+    xpack.security.transport.ssl.enabled: true
 
 2. 
     cd elasticsearch/bin
