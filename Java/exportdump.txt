@@ -1,0 +1,1 @@
+jmap -dump:format=b,file=C:/app.dump PID
