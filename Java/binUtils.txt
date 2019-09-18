@@ -1,0 +1,4 @@
+netstat -aon | findstr "8080"   // for windows
+jstat -gc PID 2000 3
+jstat -class PID 2000 3
+jmap -dump:format=b,file=C:/app.dump PID
