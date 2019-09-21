@@ -8,4 +8,4 @@
 
 3. kibana.yml
     elasticsearch.username: "kibana"
-    elasticsearch.password: "Welcome2"
+    elasticsearch.password: "password"
