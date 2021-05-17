@@ -1,7 +1,10 @@
 jstat -gc <pid> 2000 3
 jstat -gccapacity <pid>
-jstat -gcutil <pid>
 jstat -class PID 2000 3
+jstat -gcutil <pid>
 jmap -dump:format=b,file=C:/app.dump PID
 jmap -heap <pid>
 jmap -histo:live pid        // view object usage of jvm
+
+jconsole
+jvisualvm
